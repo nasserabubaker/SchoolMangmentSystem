@@ -14,8 +14,6 @@ document.getElementById('submit').addEventListener('click', () => {
 
 	// Show success message
 	showMessage('success');
-
-    students = null;
 });
 
 function inputValidation(name, id, gdpa) {
@@ -42,7 +40,8 @@ function insertStudent(name, id, gdpa) {
 		gdpa: gdpa,
 	};
 	students.push(student);
-    console.log('students array: ', students);
+	console.log('students array: ', students);
+
 }
 
 function showMessage(event){
@@ -50,7 +49,7 @@ function showMessage(event){
         alert('Studnet added!')
     }else{
         alert('Faild to add student')
-    }
+	}
 }
 
 ////////////////////////////////////////////////////////////////////////
@@ -74,16 +73,16 @@ function  display(){
 }
 
 // Delete student
-function Delete() {
+function Delete_std() {
 
 	let deleteS = document.getElementById("idDelete").value;
-
+	alert(deleteS);
 	for(var i in students) {
 
 		if(students[i].id == deleteS){
 		 students.splice(i,1);
 		 alert("student deleted");
-		 return;	
+			return;	
 	    }   	
     } 
   alert("student not fiond");
