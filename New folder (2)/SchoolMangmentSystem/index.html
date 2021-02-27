@@ -9,7 +9,6 @@
 	</head>
 	<body>
 		<div class="container">
-			<form>
 				<!-- student name -->
 				<div class="from-control">
 					<label for="name">Student Name</label><br>
@@ -38,12 +37,12 @@
 				<!-- student id -->
 				<div class="from-control">
 					<label for="idNumber"> Enter the id you want to Update</label><br>
-					<input type="number" id="Update_Id" placeholder="" />
+					<input type="number" id="id_To_Update" placeholder="" />
 				</div>
 
 				<div class="from-control">
 					<label for="name"> new Student Name</label><br>
-					<input type="text" id="id_To_Update" placeholder="" />
+					<input type="text" id="Update_Name" placeholder="" />
 				</div>
 				<!-- student name -->
 
@@ -59,9 +58,12 @@
 					<label for="gdpa"> new Student GDPA</label><br>
 					<input type="number" id="Update_Gdpa" placeholder="" />
 				</div>
-				
-			</form>
-		</div>
+				<button id="submit" type="submit" onclick="Delete_std();">delete Student</button>
+
+				<div class="from-control">
+					<label for="gdpa"> std ID for delete</label><br>
+					<input type="number" id="idDelete" placeholder="" />
+				</div>
 		<script src="./src/main.js"></script>
 	</body>
 </html>
